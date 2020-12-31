@@ -20,8 +20,9 @@ function initialize() {
       minHeight: 600,
       title: app.getName(),
       webPreferences: {
+        //enableRemoteModule: false, // Deprecated
+        //nodeIntegration: false, // Deprecated
         contextIsolation: true,
-        nodeIntegration: false, // Deprecated since Electron 10
         preload: path.join(__dirname, "/renderer-process/index.preload.js")
       },
     };
